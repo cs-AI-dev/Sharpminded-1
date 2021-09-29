@@ -9,19 +9,45 @@
         
         <!-- Master CSS (excluding Bootstrap 5 packages) -->
         <style>
+            /* Define animations first*/
+            @keyframes topIn {
+                from {
+                    background: rgb(0,0,0)
+                }
+                50% {
+                    background: rgb(0,0,255);
+                    background: linear-gradient(135deg, rgba(255,0,0,1), 0%, rgba(0,0,255,1), 100%);
+                }
+                to {
+                    background: rgb(0,0,255);
+                    background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+                }
+            }
+            
             html {
                 margin: 0;
             }
             
+            .bottom-pad {
+                height: 60px;
+            }
+            
+            .jright {
+                justify-content: right;
+            }
+            
             .masterTitle {
-                font-size: 1000%;
+                font-size: 100px;
             }
             .masterSubtitle {
-                font-size: 24px;
+                font-size: 32px;
             }
             .master-top {
                 background: rgb(0,0,255);
                 background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+                animation-name: topIn;
+                animation-delay: 1;
+                animation-iteration-count: 1;
             }
         </style>
 	</head>
@@ -29,7 +55,7 @@
 
         <div class="container-fluid p-5 bg-primary text-white master-top">
             <h1 class="masterTitle">Sharpminded</h1>
-            <p class="masterSubtitle">Answers for teachers and students alike</p> 
+            <p class="masterSubtitle">Exceptional Answers for All</p> 
         </div>
 
         <nav class="navbar bg-dark navbar-dark navbar-expand-sm sticky-top">
@@ -50,41 +76,46 @@
 
         <div class="container mt-5">
             <div class="row">
-                <div class="col-sm-8"> <!-- Main description column (2/3) -->
-                    <h1>Welcome to Sharpminded!</h1>
-                    <p>Sharpminded is an online program dedicated to both students and teachers, helping out and saving time wherever it may need to be used.</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <div class="col-sm-12">
+                    <h1 style="width: 100%; text-align: center;">Welcome to Sharpminded!</h1>
                 </div>
-                <div class="col-sm-4"> <!-- Other column (for anything) (1/3) -->
-                    <h3>Column 3</h3>        
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Here to Help</h3>
+                    <p align=justify>Sharpminded is an online program created for students by students to help out and save time in any subject, as well as outside the classroom! We help you save time, effort, and frustration trying to solve a too-common problem.</p>
+                    <p align=justify>Using advanced artificial intelligence algorithms and pattern recognition software, all you have to do is tell us what your schedule looks like and ask. Our programs will come up with a personalized answer for you in seconds, keeping you on track for an easier time.</p>
                 </div>
             </div>
         </div>
         
-        <nav class=""
+        <div class="bottom-pad"></div>
+        
+        <nav class="navbar bg-dark navbar-dark navbar-expand-sm fixed-bottom">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">About Sharpminded-1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">About the Creators</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Contact Us</a>
+                    </li>
+                    <li class="nav-item me-auto">
+                        <a class="nav-link disabled">Created with Bootstrap</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
 	</body>
 </html>
